@@ -24,6 +24,7 @@ namespace Parameter_Passing
             }
             internal static void iphonedisplay()
             {
+            DisplayModel:
                 Console.WriteLine("Iphone Model is " + iphonemodel);
                 Console.WriteLine("Iphone baseRam is " + iphoneram);
                 Console.WriteLine("Iphone model release date :" + modelreleasedate);
@@ -43,17 +44,19 @@ namespace Parameter_Passing
 
                     do
                     {
-                        Console.WriteLine("this base model not avaliable please select from following");
-                        Console.WriteLine("16");
-                        Console.WriteLine("17");
-                        Console.WriteLine("18");
+                        Console.WriteLine("this base ram model not avaliable please select from following");
+                        Console.WriteLine("32");
+                        Console.WriteLine("64");
+                        Console.WriteLine("128");
 
-                        iphonemodel = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("update model is " + iphonemodel);
+                        iphoneram = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("updated ram is " + iphoneram);
+                        goto DisplayModel;
+                        
 
                     } while (iphonemodel != 16 &&
-             iphonemodel != 17 &&
-             iphonemodel != 18);
+                             iphonemodel != 17 &&
+                             iphonemodel != 18);
 
                 }
             }
