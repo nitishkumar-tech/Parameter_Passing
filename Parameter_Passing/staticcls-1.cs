@@ -1,0 +1,67 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Parameter_Passing
+{
+    internal class staticcls_1
+    {
+        static class myclass
+        {
+            static int iphonemodel;
+            static int iphoneram;
+            static string modelreleasedate;
+            static string storage;
+            static myclass()
+            {
+                iphonemodel = 18;
+                iphoneram = 12;
+                modelreleasedate = "September 2026";
+                storage = string.Empty;
+
+            }
+            internal static void iphonedisplay()
+            {
+                Console.WriteLine("Iphone Model is " + iphonemodel);
+                Console.WriteLine("Iphone baseRam is " + iphoneram);
+                Console.WriteLine("Iphone model release date :" + modelreleasedate);
+                Console.WriteLine("Iphone base storage  :" + storage);
+
+                if (string.IsNullOrEmpty(storage))
+
+                {
+                    Console.WriteLine("storage is not defined please pass the value");
+                }
+                else
+                {
+                    Console.WriteLine("storage is " + storage);
+                }
+                if (iphoneram == 12)
+                {
+
+                    do
+                    {
+                        Console.WriteLine("this base model not avaliable please select from following");
+                        Console.WriteLine("16");
+                        Console.WriteLine("17");
+                        Console.WriteLine("18");
+
+                        iphonemodel = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("update model is " + iphonemodel);
+
+                    } while (iphonemodel != 16 &&
+             iphonemodel != 17 &&
+             iphonemodel != 18);
+
+                }
+            }
+
+            static void Main(string[] args)
+            {
+                myclass.iphonedisplay();
+            }
+        }
+    }
+}
