@@ -32,7 +32,7 @@ namespace Parameter_Passing
                 
                 total = m1 + m2 + m3;
                 avg = (m1 + m2 + m3) / 3;
-                if(avg > 90)
+                if(avg >= 90)
                 {
                     Console.WriteLine("Grade A");
                 }
@@ -55,9 +55,9 @@ namespace Parameter_Passing
         static void Main(string[] args)
         {
             student obj = new student();
-            int m1 = 95;
-            obj.marksdisplay(ref m1,80,70);
-            int sid;
+            int m1 = 85;
+            obj.marksdisplay(ref m1,90,90);
+            int sid=105;
             obj.studentdisplay( out sid,"rama",17);
         }
     }
