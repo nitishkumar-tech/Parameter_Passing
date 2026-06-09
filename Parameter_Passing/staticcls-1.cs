@@ -10,9 +10,9 @@ namespace Parameter_Passing
     {
         static class myclass
         {
-            static int iphonemodel;
+           private static int iphonemodel;
             static int iphoneram;
-            static string modelreleasedate;
+            private static string modelreleasedate;
             static string storage;
             static myclass()
             {
