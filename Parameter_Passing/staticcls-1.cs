@@ -50,14 +50,19 @@ namespace Parameter_Passing
                         Console.WriteLine("128");
 
                         iphoneram = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("updated ram is " + iphoneram);
-                        goto DisplayModel;
-                        
 
-                    } while (iphonemodel != 16 &&
-                             iphonemodel != 17 &&
-                             iphonemodel != 18);
+                        if (iphoneram != 32 &&
+                            iphoneram != 64 &&
+                            iphoneram != 128)
+                        {
+                            Console.WriteLine("Invalid RAM. Please select 32, 64, or 128 only.");
+                        }
 
+                    } while (iphoneram != 32 &&
+                             iphoneram != 64 &&
+                             iphoneram != 128);
+                    Console.WriteLine("Updated RAM is " + iphoneram);
+                    goto DisplayModel;
                 }
             }
 
