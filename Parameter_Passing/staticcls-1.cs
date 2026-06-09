@@ -10,16 +10,18 @@ namespace Parameter_Passing
     {
         static class myclass
         {
-           private static int iphonemodel;
+            private static int iphonemodel;
             static int iphoneram;
             private static string modelreleasedate;
-            static string storage;
+            static int storage;
             static myclass()
             {
                 iphonemodel = 18;
                 iphoneram = 6;
                 modelreleasedate = "September 2026";
-                storage = string.Empty;
+                 int? storage;
+
+                storage = null;
 
             }
             internal static void iphonedisplay()
@@ -31,49 +33,50 @@ namespace Parameter_Passing
                 Console.WriteLine("Iphone base storage  :" + storage);
             }
             internal static void storageupdate()
-            { 
-
-                if (string.IsNullOrEmpty(storage))
-
-                {
-                    Console.WriteLine("storage is not defined please pass the value");
-                }
-                else
-                {
-                    Console.WriteLine("storage is " + storage);
-                }
-
-                Console.WriteLine("Enter Storage:");
-                storage = Console.ReadLine();
-
-
-
-
-                if (iphoneram == 6)
+            {
+                try
                 {
 
-                    while (iphoneram != 8 &&
-                            iphoneram != 12) 
+                    if (storage == null) 
+
                     {
-                        Console.WriteLine("this base ram model not avaliable please select from following");
-                        Console.WriteLine("8");
-                        Console.WriteLine("12");
-
-                        iphoneram = int.Parse(Console.ReadLine());
-
-                        if (iphoneram != 8 &&
-                            iphoneram != 12 
-                                            )
-                        {
-                            Console.WriteLine("Invalid RAM, Please select 8 or 12 only.");
-                        }
-
+                        Console.WriteLine("storage is not defined please pass the value");
                     }
-                    Console.WriteLine("Updated RAM is " + iphoneram);
-                   
+                    else
+                    {
+                        Console.WriteLine("storage is " + storage);
+                    }
+
+                    Console.WriteLine("Enter Storage:");
+                    storage = int.Parse(Console.ReadLine());    
+                    if (iphoneram == 6)
+                    {
+
+                        while (iphoneram != 8 &&
+                                iphoneram != 12)
+                        {
+                            Console.WriteLine("this base ram model not avaliable please select from following");
+                            Console.WriteLine("8");
+                            Console.WriteLine("12");
+
+                            iphoneram = int.Parse(Console.ReadLine());
+
+                            if (iphoneram != 8 &&
+                                iphoneram != 12
+                                                )
+                            {
+                                Console.WriteLine("Invalid RAM, Please select 8 or 12 only.");
+                            }
+
+                        }
+                        Console.WriteLine("Updated RAM is " + iphoneram);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
                 }
             }
-
             static void Main(string[] args)
             {
                 
