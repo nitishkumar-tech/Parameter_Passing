@@ -17,18 +17,21 @@ namespace Parameter_Passing
             static myclass()
             {
                 iphonemodel = 18;
-                iphoneram = 12;
+                iphoneram = 6;
                 modelreleasedate = "September 2026";
                 storage = string.Empty;
 
             }
             internal static void iphonedisplay()
             {
-            DisplayModel:
+                Console.WriteLine("\n------ iPhone Details ------");
                 Console.WriteLine("Iphone Model is " + iphonemodel);
                 Console.WriteLine("Iphone baseRam is " + iphoneram);
                 Console.WriteLine("Iphone model release date :" + modelreleasedate);
                 Console.WriteLine("Iphone base storage  :" + storage);
+            }
+            internal static void storageupdate()
+            { 
 
                 if (string.IsNullOrEmpty(storage))
 
@@ -39,36 +42,44 @@ namespace Parameter_Passing
                 {
                     Console.WriteLine("storage is " + storage);
                 }
-                if (iphoneram == 12)
+
+                Console.WriteLine("Enter Storage:");
+                storage = Console.ReadLine();
+
+
+
+
+                if (iphoneram == 6)
                 {
 
-                    do
+                    while (iphoneram != 8 &&
+                            iphoneram != 12) 
                     {
                         Console.WriteLine("this base ram model not avaliable please select from following");
-                        Console.WriteLine("32");
-                        Console.WriteLine("64");
-                        Console.WriteLine("128");
+                        Console.WriteLine("8");
+                        Console.WriteLine("12");
 
-                        iphoneram = Convert.ToInt32(Console.ReadLine());
+                        iphoneram = int.Parse(Console.ReadLine());
 
-                        if (iphoneram != 32 &&
-                            iphoneram != 64 &&
-                            iphoneram != 128)
+                        if (iphoneram != 8 &&
+                            iphoneram != 12 
+                                            )
                         {
-                            Console.WriteLine("Invalid RAM. Please select 32, 64, or 128 only.");
+                            Console.WriteLine("Invalid RAM, Please select 8 or 12 only.");
                         }
 
-                    } while (iphoneram != 32 &&
-                             iphoneram != 64 &&
-                             iphoneram != 128);
+                    }
                     Console.WriteLine("Updated RAM is " + iphoneram);
-                    goto DisplayModel;
+                   
                 }
             }
 
             static void Main(string[] args)
             {
+                
+                myclass.storageupdate();
                 myclass.iphonedisplay();
+
             }
         }
     }
