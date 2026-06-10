@@ -43,13 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="login.cs" />
+    <Compile Include="Maincls.cs" />
+    <Compile Include="part-1.cs" />
+    <Compile Include="part-2.cs" />
+    <Compile Include="PartialMainPatientds.cs" />
+    <Compile Include="PartialPatienr-2.cs" />
+    <Compile Include="PartialPatient-1.cs" />
+    <Compile Include="particalcls1.cs" />
     <Compile Include="passingparameters.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sealdclas-2.cs" />
     <Compile Include="staticcls-1.cs" />
     <Compile Include="staticcls.cs" />
-    <Compile Include="validnum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

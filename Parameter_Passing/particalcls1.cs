@@ -6,12 +6,15 @@
 
 //namespace Parameter_Passing
 //{
-//    internal class validnum
+//    partial class multimedia
 //    {
-//        class myclass
+//        internal void playaudio()
 //        {
-
+//            Console.WriteLine("playing audio");
 //        }
+//        //internal class class1
+//        //{
+
+//        //}
 //    }
 //}
-
