@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="gen1.cs" />
+    <Compile Include="Gen2.cs" />
     <Compile Include="Maincls.cs" />
     <Compile Include="part-1.cs" />
     <Compile Include="part-2.cs" />
