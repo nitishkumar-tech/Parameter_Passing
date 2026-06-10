@@ -37,7 +37,7 @@ namespace Parameter_Passing
                 try
                 {
 
-                    if (storage == null) 
+                    if (storage == null)
 
                     {
                         Console.WriteLine("storage is not defined please pass the value");
@@ -46,9 +46,24 @@ namespace Parameter_Passing
                     {
                         Console.WriteLine("storage is " + storage);
                     }
-
                     Console.WriteLine("Enter Storage:");
-                    storage = int.Parse(Console.ReadLine());    
+                    storage = int.Parse(Console.ReadLine());
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    Console.WriteLine("error");
+                }
+            }
+
+                internal static void ramupdate()
+            {
+            
+
+               
                     if (iphoneram == 6)
                     {
 
@@ -71,16 +86,16 @@ namespace Parameter_Passing
                         }
                         Console.WriteLine("Updated RAM is " + iphoneram);
                     }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
+                
+                
+
+                    
             }
             static void Main(string[] args)
             {
                 
                 myclass.storageupdate();
+                myclass.ramupdate();
                 myclass.iphonedisplay();
 
             }
